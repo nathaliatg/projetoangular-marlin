@@ -43,7 +43,7 @@ Este projeto foi construído para atender aos seguintes requisitos, comprovando 
 ---
 
 ##  Prévia
-
+![Prévia do projeto](https://raw.githubusercontent.com/nathaliatg/projetoangular-marlin/refs/heads/main/angularprojeto.gif)
 ---
 ##  Como Rodar o Projeto Localmente
 
