@@ -1,0 +1,43 @@
+<div class="plan-list-section container">
+  <h2 class="section-title">Encontre o Plano Odontológico Ideal</h2>
+
+  <div class="search-filter-controls">
+    <div class="search-input-group">
+      <i class="fas fa-search"></i> <input
+        type="text"
+        placeholder="Busque um plano"
+        [(ngModel)]="searchTerm"
+        (input)="applyFilters()"
+        class="form-control"
+      />
+    </div>
+
+    <div class="filter-dropdown-group">
+      <i class="fas fa-chevron-down"></i> <select [(ngModel)]="filterValue" (change)="applyFilters()" class="form-control">
+        <option value="">Filtrar por preço</option>
+        <option value="50">Até R$ 50</option>
+        <option value="100">Até R$ 100</option>
+        <option value="150">Até R$ 150</option>
+        <option value="200">Até R$ 200</option>
+        <option value="300">Até R$ 300</option>
+        <option value="9999">Mais caro</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="info-message">Carregando planos...</div>
+  <div *ngIf="error" class="error-message">Erro ao carregar os planos: {{ error }}</div>
+  <div *ngIf="filteredPlans.length === 0 && !loading && !error" class="info-message no-results">
+    Nenhum plano encontrado com os critérios de busca/filtro.
+  </div>
+
+  <div class="plan-cards-grid">
+    <div *ngFor="let plan of filteredPlans" class="plan-card">
+      <h3 class="plan-name">{{ plan.nome }}</h3>
+      <p class="plan-value">R$ {{ plan.valor | number:'1.2-2' }}</p> <p class="plan-description">{{ plan.descricao }}</p>
+      <ul class="plan-features">
+        <li *ngFor="let feature of plan.features"><i class="fas fa-check-circle"></i> {{ feature }}</li> </ul>
+      <button class="details-button">Ver Mais</button>
+    </div>
+  </div>
+</div>

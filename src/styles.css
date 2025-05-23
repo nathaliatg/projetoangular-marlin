@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  line-height: 1.6; 
+  background-color: #f8f9fa; 
+  color: #333; 
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+html, body {
+  height: 100%;
+}
+
+#root, app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+  flex: 1; 
+}
+
+section[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -80px; 
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}

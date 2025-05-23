@@ -1,0 +1,196 @@
+/* Espaço e cor de fundo da seção de planos */
+.plan-list-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Título grande */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0057b8;
+  margin-bottom: 50px;
+}
+
+/* Organizar a busca e o filtro */
+.search-filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  flex-wrap: wrap; 
+}
+
+/* Estilo da caixa de busca e filtro */
+.search-input-group, .filter-dropdown-group {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+/* Estilo dos ícones */
+.search-input-group i, .filter-dropdown-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+/* Estilo do campo de texto e do menu de seleção */
+.form-control {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+}
+
+.filter-dropdown-group .form-control {
+  padding-right: 45px;
+}
+
+/* Mensagens de carregamento ou erro */
+.info-message {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.no-results {
+  font-style: italic;
+}
+
+/* Organizar os retângulos dos planos */
+.plan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Estilo de cada retângulo de plano */
+.plan-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  color: #1e73c5;
+  margin-bottom: 15px;
+}
+
+.plan-value {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.plan-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.plan-features li {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.plan-features li i {
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.details-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+/* Como se ajusta em telas menores */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .search-filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .search-input-group, .filter-dropdown-group {
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    padding: 20px;
+  }
+
+  .plan-name {
+    font-size: 1.5rem;
+  }
+
+  .plan-value {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,199 @@
+/* hero.component.css */
+
+/* Seção principal */
+.hero-section {
+  background-color: #f8f8f9; 
+  padding: 0px 0; 
+  overflow: hidden; 
+}
+
+/* Container do conteúdo (texto + imagem) */
+.hero-content {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+/* Bloco de texto */
+.hero-text {
+  flex: 1; 
+  padding-right: 40px;
+  max-width: 50%; 
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  color: #005393;
+  margin-bottom: 20px; 
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.2rem; 
+  color: var(--cor-texto-escuro); 
+  margin-bottom: 30px; 
+}
+
+/* Estilização do Preço (R$ 30,00) */
+.price-info p {
+  font-size: 1.2rem; 
+  color: var(--cor-texto-escuro);
+  margin-bottom: 5px;
+}
+
+.price-display {
+  display: flex; 
+  align-items: baseline; 
+  font-weight: bold;
+  color: var(--cor-texto-escuro); 
+  margin-bottom: 30px; 
+}
+
+.currency {
+  font-size: 1.5rem;
+  margin-right: 5px; 
+  color: var(--cor-texto-escuro); 
+}
+
+.main-price {
+  font-size: 3.5rem;
+  line-height: 1; 
+}
+
+.cents {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--cor-texto-escuro);
+  position: relative; 
+  top: -0.8em; 
+  margin-left: 0px; 
+}
+
+/* Estilo para o Botão */
+.primary-button {
+  background-color: #0069d9; 
+  text-decoration: none;
+  color: #ffffff; 
+  padding: 1rem 2rem; 
+  border: none; 
+  border-radius: 30px; 
+  font-size: 1.2rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.primary-button:hover {
+  text-decoration: none;
+  background-color: #005393; 
+}
+
+/* Estilos da Imagem */
+.hero-image {
+  flex: 1;
+  text-align: right; 
+}
+
+.hero-image img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  object-fit: contain; 
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 40px 0; 
+  }
+
+  .hero-content {
+    flex-direction: column; 
+    text-align: center; 
+    padding: 0 15px; 
+  }
+
+  .hero-text {
+    padding-right: 0; 
+    max-width: 100%; 
+    margin-bottom: 40px; 
+    padding: 0 15px; 
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem; 
+  }
+
+  .hero-text p {
+    font-size: 1.1rem; 
+  }
+
+  /* Estilização do Preço em Mobile */
+  .price-info p {
+    text-align: center; 
+  }
+
+  .price-display {
+    justify-content: center; 
+  }
+
+  .currency {
+    font-size: 1.2rem; 
+  }
+  .main-price {
+    font-size: 2.8rem; 
+  }
+  .cents {
+    font-size: 1.2rem; 
+    top: -0.6em; 
+  }
+
+  .primary-button {
+    margin: 20px auto 0;
+    display: block; 
+    max-width: 250px; 
+  }
+
+  .hero-image {
+    text-align: center;
+    width: 100%; 
+    margin-top: 20px; 
+  }
+
+  .hero-image img {
+    max-width: 80%; 
+    height: auto;
+    object-fit: contain; 
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 30px 10px;
+  }
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .currency {
+    font-size: 1rem; 
+  }
+  .main-price {
+    font-size: 2.2rem; 
+  }
+  .cents {
+    font-size: 1rem; 
+    top: -0.5em;
+  }
+  .primary-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  .hero-image img {
+    max-width: 90%; 
+  }
+}

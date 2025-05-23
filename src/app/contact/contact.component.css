@@ -1,0 +1,94 @@
+/* Espaço e cor de fundo da seção de contato */
+.contact-section {
+  padding-top: 60px;    
+  padding-right: 20px;  
+  padding-left: 20px;   
+  padding-bottom: 0px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact-section .section-title {
+  margin-bottom: 30px;
+  color: #1e73c5;
+}
+
+/* Onde fica o formulário */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 30px 10px; /* <--- Mudei o padding-bottom de 30px para 10px ou menos */
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* Espaço entre os campos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Estilo dos campos de texto */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-group textarea {
+  resize: vertical; 
+  min-height: 100px;
+}
+
+/* Botão de enviar */
+.submit-button {
+  background-color: #00376c; 
+  color: #ffffff; 
+  padding: 1rem 2rem; 
+  border: none; 
+  border-radius: 30px; 
+  font-size: 1.2rem;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  display: block; 
+  margin: 20px auto; 
+  margin-bottom: 0;
+  width: fit-content;
+}
+
+.submit-button:hover {
+  background-color: #ffffff; 
+  color: #00376c;
+}
+
+/* Como se ajusta em telas menores */
+@media (max-width: 576px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}

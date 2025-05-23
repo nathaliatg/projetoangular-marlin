@@ -1,0 +1,124 @@
+/* header.component.css */
+
+.marlin-header {
+  background-color: #005393; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky; 
+  top: 0;
+  z-index: 1000; 
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px; 
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin-left: 30px; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--cor-secundaria-azul); 
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex; 
+  align-items: center;
+  gap: 10px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button i {
+  font-size: 1.2rem; 
+}
+
+.login-button:hover {
+  background-color: #ffffff;
+  color: var(--cor-principal-azul); 
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center; 
+    padding: 15px; 
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .main-nav {
+    margin: 15px 0; 
+    width: 100%; 
+  }
+
+  .main-nav ul {
+    flex-direction: column; 
+    gap: 10px;
+    text-align: center;
+  }
+
+  .main-nav li {
+    margin: 0; 
+    padding: 5px 0; 
+  }
+
+  .main-nav a {
+    font-size: 1.1rem;
+  }
+
+  .login-button {
+    margin-top: 15px; 
+    width: 80%; 
+    max-width: 200px;
+    justify-content: center; 
+  }
+}
+
+/* Telas ainda menores se necessário */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 10px; 
+  }
+
+  .logo img {
+    height: 35px; 
+  }
+
+  .main-nav a {
+    font-size: 1rem; 
+  }
+}
