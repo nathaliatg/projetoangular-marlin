@@ -17,7 +17,7 @@ Este projeto foi desenvolvido como parte de um desafio de front-end, com o objet
 
 ---
 
-## ✨ Requisitos do Desafio (Checklist de Funcionalidades)
+## Requisitos do Desafio (Checklist de Funcionalidades)
 
 Este projeto foi construído para atender aos seguintes requisitos, comprovando a aplicação das melhores práticas de desenvolvimento web:
 
@@ -42,6 +42,9 @@ Este projeto foi construído para atender aos seguintes requisitos, comprovando 
 
 ---
 
+##  Prévia
+
+---
 ##  Como Rodar o Projeto Localmente
 
 Siga estas instruções para configurar e executar o projeto em sua máquina local:
